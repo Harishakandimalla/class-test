@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double x, n, result;
+    int choice;
+
+    printf("Enter the value of x: ");
+    scanf("%lf", &x);
+    printf("Enter the value of n: ");
+    scanf("%lf", &n);
+
+    printf("Enter your choice of operation:\n");
+    printf("1. Pow(x,n)\n");
+    printf("2. Add(x,n)\n");
+    printf("3. Sub(x,n)\n");
+    printf("4. Mul(x,n)\n");
+    printf("5. Div(x,n)\n");
+    scanf("%d", &choice);
+
+    switch (choice) {
+        case 1:
+            result = pow(x, n);
+            printf("Pow(%.2lf, %.2lf) = %.2lf\n", x, n, result);
+            break;
+        case 2:
+            result = x + n;
+            printf("Add(%.2lf, %.2lf) = %.2lf\n", x, n, result);
+            break;
+        case 3:
+            result = x - n;
+            printf("Sub(%.2lf, %.2lf) = %.2lf\n", x, n, result);
+            break;
+        case 4:
+            result = x * n;
+            printf("Mul(%.2lf, %.2lf) = %.2lf\n", x, n, result);
+            break;
+        case 5:
+            if (n == 0) {
+                printf("Error: Division by zero\n");
+            } else {
+                result = x / n;
+                printf("Div(%.2lf, %.2lf) = %.2lf\n", x, n, result);
+            }
+            break;
+        default:
+            printf("Error: Invalid choice\n");
+            break;
+    }
+
+    return 0;
+}
+output:
+Enter the value of x: 2
+Enter the value of n: 4
+Enter your choice of operation:
+1. Pow(x,n)
+2. Add(x,n)
+3. Sub(x,n)
+4. Mul(x,n)
+5. Div(x,n)
+2
+Add(2.00, 4.00) = 6.00
