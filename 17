@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int num, reversed_num = 0, remainder;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Reverse the digits of the number
+    while (num != 0) {
+        remainder = num % 10;
+        reversed_num = reversed_num * 10 + remainder;
+        num /= 10;
+    }
+
+    printf("Reverse Number: %d\n", reversed_num);
+
+    return 0;
+}
+output:
+Enter a number: 14567
+Reverse Number: 76541
